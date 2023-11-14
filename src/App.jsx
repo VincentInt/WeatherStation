@@ -5,26 +5,24 @@ import Loaded from './components/Loaded/Loaded';
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
-  const [statusPage, setStatusPage] = useState('load')
+  const [statusPage, setStatusPage] = useState('load');
 
   useEffect(() => {
     const fetchWeatherData = async () => {
       try {
         const data = await setGetApi();
         setWeatherData(data);
-        setStatusPage('loaded')
+        setStatusPage('loaded');
       } catch (error) {
         console.error('Failed to fetch weather data:', error);
       }
     };
     fetchWeatherData();
   }, []);
-
   return (
     <main className="App">
       <div>
-        {statusPage === 'loaded'? <Loaded weatherData={weatherData}/> : <h2>Загрузка</h2>}
-    
+        {statusPage === 'loaded' ? <Loaded weatherData={weatherData} /> : <h2>Загрузка</h2>}
       </div>
     </main>
   );

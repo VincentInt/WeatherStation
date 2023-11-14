@@ -11,11 +11,11 @@ import nightSnowImg from '../../../../public/icon-10.svg';
 import nightThunderstormImg from '../../../../public/icon-11.svg';
 
 const Weather = ({ weatherData, date }) => {
-  let statusDay = null
+  let statusDay = null;
   if (date.getHours() >= 6 && date.getHours() <= 18) {
-    statusDay = 'day'
+    statusDay = 'day';
   } else {
-    statusDay = 'night'
+    statusDay = 'night';
   }
   const imgObj = {
     day: {
@@ -60,7 +60,18 @@ const Weather = ({ weatherData, date }) => {
         <h2>{weatherData.weather[0].main}</h2>
       </div>
       <div className={style.imgContainer}>
-        <img className={style.img} src={imgObj[statusDay][weatherData.weather[0].main]} alt="icon" />
+        <img
+          style={{
+            filter: `${
+              statusDay === 'day'
+                ? 'drop-shadow(0px 0px 50px rgb(82, 87, 232, 0.52))'
+                : 'drop-shadow(0px 0px 50px rgb(230, 232, 82, 0.52))'
+            }`,
+          }}
+          className={style.img}
+          src={imgObj[statusDay][weatherData.weather[0].main]}
+          alt="icon"
+        />
       </div>
       <div className={style.dataContainer}>
         <div>
