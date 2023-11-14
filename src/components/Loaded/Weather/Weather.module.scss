@@ -1,0 +1,24 @@
+.containerWeather {
+  padding: 15px 30px;
+  border: 5px solid rgba(255, 255, 255, 0.096);
+  border-radius: 12px;
+  margin-bottom: 20px;
+  .containerTitle {
+    display: flex;
+    align-items: center;
+  }
+  .imgContainer {
+    display: flex;
+    justify-content: center;
+    .img {
+    }
+  }
+  .dataContainer {
+    .containerCardData {
+      display: flex;
+      margin: 0px -30px;
+      padding: 15px 30px;
+      border-top: 5px solid rgba(255, 255, 255, 0.096);
+    }
+  }
+}

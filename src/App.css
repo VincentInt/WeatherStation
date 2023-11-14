@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+button,
+title {
+  display: block;
+  font-family: 'Manrope', sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  margin: 2px;
+  color: white;
+}
+.App{
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+}
