@@ -1,4 +1,5 @@
 import style from './Weather.module.scss';
+
 import dayClearImg from '../../../../public/icon.svg';
 import dayCloudsImg from '../../../../public/icon-1.svg';
 import dayRainImg from '../../../../public/icon-3.svg';
@@ -64,8 +65,8 @@ const Weather = ({ weatherData, date }) => {
           style={{
             filter: `${
               statusDay === 'day'
-                ? 'drop-shadow(0px 0px 50px rgb(82, 87, 232, 0.52))'
-                : 'drop-shadow(0px 0px 50px rgb(230, 232, 82, 0.52))'
+                ? 'drop-shadow(0px 0px 50px rgb(230, 232, 82, 0.52))'
+                : 'drop-shadow(0px 0px 50px rgb(82, 87, 232, 0.52))'
             }`,
           }}
           className={style.img}

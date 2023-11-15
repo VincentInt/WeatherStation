@@ -1,5 +1,5 @@
 import style from './DataLocate.module.scss';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 
 const DataLocate = ({ city, date, setDate }) => {
   const formatNumber = (num) => num.toString().padStart(2, '0');
